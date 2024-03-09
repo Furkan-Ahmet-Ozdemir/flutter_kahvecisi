@@ -13,28 +13,55 @@ class BenimUygulamam extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.lime,
+        backgroundColor: Colors.brown,
         body: SafeArea(
-          child: Container(
-            // transform: Matrix4.rotationZ(-0.2),
-            alignment: Alignment.bottomRight,
-            width: 200,
-            height: 100,
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadiusDirectional.circular(16.0),
-              color: Colors.white,
-            ),
-
-            // margin: EdgeInsets.only(left: 12, top: 25),
-            // margin: EdgeInsets.symmetric(vertical: 30, horizontal: 35),
-            margin: EdgeInsets.fromLTRB(25, 35, 25, 35),
-
-            padding: EdgeInsets.all(26.0),
-            child: Transform(
-                transform: Matrix4.rotationZ(-0.2),
-                alignment: FractionalOffset.center,
-                child: Text("Kod Planet")),
+          child: Row(
+            // mainAxisSize: MainAxisSize.min,
+            // mainAxisAlignment: MainAxisAlignment.end,
+            // verticalDirection: VerticalDirection.up,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                // margin: EdgeInsets.symmetric(vertical: 20),
+                color: Colors.white,
+                // width: 100,
+                height: 100,
+                child: Text("1.cont"),
+              ),
+              SizedBox(
+                height: 30,
+                width: 20,
+              ),
+              Container(
+                color: Colors.pink,
+                // width: 100,
+                height: 100,
+                child: Text("2.cont"),
+              ),
+              SizedBox(
+                height: 30,
+                width: 20,
+              ),
+              Container(
+                color: Colors.blueGrey,
+                // width: 100,
+                height: 100,
+                child: Text("3.cont"),
+              ),
+              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Container(
+                  color: Colors.white,
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  color: Colors.white,
+                  width: 50,
+                  height: 50,
+                )
+              ]),
+            ],
           ),
         ),
       ),
