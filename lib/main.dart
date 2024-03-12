@@ -12,58 +12,37 @@ class BenimUygulamam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Pacifico'),
       home: Scaffold(
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.brown[300],
         body: SafeArea(
-          child: Row(
-            // mainAxisSize: MainAxisSize.min,
-            // mainAxisAlignment: MainAxisAlignment.end,
-            // verticalDirection: VerticalDirection.up,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Container(
-                // margin: EdgeInsets.symmetric(vertical: 20),
-                color: Colors.white,
-                // width: 100,
-                height: 100,
-                child: Text("1.cont"),
+              CircleAvatar(
+                radius: 70,
+                backgroundColor: Colors.lime,
+                backgroundImage: AssetImage('assets/images/kahve.jpg'),
               ),
-              SizedBox(
-                height: 30,
-                width: 20,
-              ),
-              Container(
-                color: Colors.pink,
-                // width: 100,
-                height: 100,
-                child: Text("2.cont"),
-              ),
-              SizedBox(
-                height: 30,
-                width: 20,
-              ),
-              Container(
-                color: Colors.blueGrey,
-                // width: 100,
-                height: 100,
-                child: Text("3.cont"),
-              ),
-              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(
-                  color: Colors.white,
-                  width: 50,
-                  height: 50,
+              Text(
+                'Flutter Kahvecisi',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 45,
+                  color: Colors.brown[900],
                 ),
-                Container(
+              ),
+              Text(
+                'Bir Fincan Uzağında',
+                style: TextStyle(
+                  fontSize: 16,
                   color: Colors.white,
-                  width: 50,
-                  height: 50,
-                )
-              ]),
+                ),
+              ),
             ],
           ),
-        ),
+        )),
       ),
     );
   }
