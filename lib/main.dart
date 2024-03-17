@@ -45,52 +45,50 @@ class BenimUygulamam extends StatelessWidget {
                 height: 20.0,
               ),
               Container(
+                width: 300,
+                child: Divider(
+                  height: 30,
+                  color: Colors.brown[900],
+                ),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(
                   horizontal: 45.0,
                 ),
-                padding: EdgeInsets.all(10.0),
                 color: Colors.brown[900],
-                child: Row(
-                  children: [
-                    Icon(
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    size: 25,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'siparis@fkahvecisi.com',
+                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  horizontal: 45.0,
+                ),
+                color: Colors.brown[900],
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.email,
                       size: 25,
                       color: Colors.white,
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'siparis@fkahvecisi.com',
-                      style: TextStyle(color: Colors.white, fontSize: 20.0),
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 45.0,
-                ),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.brown[900],
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      size: 25,
-                      color: Colors.white,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
+                    title: Text(
                       '+90 554 987 98 98',
                       style: TextStyle(color: Colors.white, fontSize: 20.0),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
             ],
